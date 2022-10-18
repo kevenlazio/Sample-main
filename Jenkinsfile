@@ -22,9 +22,9 @@ pipeline {
       echo 'Processing failed'
     }
     success {
-      step([$class: 'AWSEBDeploymentBuilder', credentialId: 'aws_mehroz', zeroDowntime: false, skipEnvironmentUpdates: true,
+      step([$class: 'AWSEBDeploymentBuilder', credentialId: 'keven-lazio', zeroDowntime: false, skipEnvironmentUpdates: true,
       awsRegion: 'us-east-1', applicationName: 'Sample', environmentName: 'Sample-env',
-      bucketName: 'elasticbeanstalk-ap-south-1-360464920616', rootObject: '.', includes: '**/*', excludes: '', versionLabelFormat: "main-${BUILD_NUMBER}", versionDescriptionFormat: "main-${BUILD_NUMBER}-env"])
+      bucketName: 'elasticbeanstalk-us-east-1-356337751874', rootObject: '.', includes: '**/*', excludes: '', versionLabelFormat: "main-${BUILD_NUMBER}", versionDescriptionFormat: "main-${BUILD_NUMBER}-env"])
     }
   }
 }
