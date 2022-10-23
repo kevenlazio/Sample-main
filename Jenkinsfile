@@ -23,7 +23,7 @@ pipeline {
     }
     success {
       step([$class: 'AWSEBDeploymentBuilder', credentialId: 'keven-lazio', zeroDowntime: false, skipEnvironmentUpdates: true,
-      awsRegion: 'us-east-1', applicationName: 'node-sample-application-dev', environmentName: 'Node-sampleapplication-dev-env',
+      awsRegion: 'us-east-1', applicationName: 'Sample', environmentName: 'Sample-env',
       bucketName: 'elasticbeanstalk-us-east-1-356337751874', rootObject: '.', includes: '**/*', excludes: '', versionLabelFormat: "main-${BUILD_NUMBER}", versionDescriptionFormat: "main-${BUILD_NUMBER}-env"])
     }
   }
